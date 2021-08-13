@@ -2,9 +2,6 @@
 /*                                                 Includes                                                        */
 /*=================================================================================================================*/
 #include "leds.h"
-
-#include <stdbool.h>
-
 #include "ledsError.h"
 
 /*=================================================================================================================*/
@@ -17,7 +14,7 @@
 #define LEDS_INDEX_MAX 16
 
 /*=================================================================================================================*/
-/*                                                 Includes                                                        */
+/*                                             Private variables                                                   */
 /*=================================================================================================================*/
 static uint16_t *ledsPort;
 
@@ -53,8 +50,6 @@ void LedsTurnOff(int led) {
 void LedsTurnOnAll() { *ledsPort = LEDS_ALL_ON; }
 
 void LedsTurnOffAll() { *ledsPort = LEDS_ALL_OFF; }
-
-// standar formateo llvm
 
 bool LedsStatusGet(int led) {
   bool ret;
