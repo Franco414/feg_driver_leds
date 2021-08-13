@@ -28,8 +28,8 @@ static bool LedsCheckIndex(int led) { return ((led >= LEDS_INDEX_START) && (led 
 /*=================================================================================================================*/
 /*                                              Public Functions                                                   */
 /*=================================================================================================================*/
-void LedsInit(uint16_t *ledsAddr) {
-  ledsPort = ledsAddr;
+void LedsInit(uint16_t *address) {
+  ledsPort = address;
   *ledsPort = LEDS_ALL_OFF;
 }
 
